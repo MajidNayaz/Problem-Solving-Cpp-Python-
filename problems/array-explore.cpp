@@ -14,27 +14,30 @@ using namespace std;
 // Reverse the resulting array.
 // Return the final array.
 
-void analyzeArray(std::vector<int> nums){
+
+int analyzeArray(std::vector<int> nums){
   int maximum; 
   maximum = *max_element(nums.begin(), nums.end());
   cout <<"max is: " <<  maximum << endl;
+  return maximum;
+  }
+
+void findSecondLargest(vector<int> nums, int maximum){
   
-  // int max_endex = nums[maximum];
-
-  // std::vector<int> temp_nums;
-  // for()
-
+  nums.erase(remove(nums.begin(),nums.end(),maximum),nums.end());
+  cout << "the second "<< analyzeArray(nums)<< "\n";
+  for(int i=0; i<nums.size(); i++){
+    cout<< nums[i] <<" ";
+  }
+  
 }
 
+int main(){
+   std::vector<int> nums = {4, 0, 7, 4, 0, 9, 2, 3, 1};
 
+  int maximum = analyzeArray(nums);
+  findSecondLargest(nums, maximum);
 
-int main() {
-
-  std::vector<int> nums = {4, 0, 7, 4, 0, 9, 2, 3, 1};
-
-  analyzeArray(nums);
-  //this is just for testing hamid's repository connection 
-  //this is a part of toturial 
 
   return 0;
 }
