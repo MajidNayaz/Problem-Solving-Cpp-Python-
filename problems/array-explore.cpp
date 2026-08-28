@@ -57,6 +57,11 @@ vector<int> deleteDuplicated(vector<int> nums) {
     return temp;
 }
 
+vector<int> reverseVector(vector<int> nums){
+  reverse(nums.begin(),nums.end());
+  return nums;
+}
+
 int main(){
    std::vector<int> nums = {4, 0, 7, 4, 0, 9, 2, 9, 3, 1};
 
@@ -75,6 +80,12 @@ int main(){
   cout<<" "<< A[i];
   }
   cout<<endl;
+
+  vector<int> reversedV = reverseVector(nums);
+  cout << "The reversed Vector = ";
+  for(int i:reversedV){
+    cout << i << " ";
+  }
   return 0;
 }
 
@@ -98,4 +109,13 @@ int main(){
 if (std::find(my_list.begin(), my_list.end(), x) != my_list.end()) {
     // x is in the list
 }
+*/
+
+// Reverse the resulting array.
+/* 
+1.creating a temp array
+2.for loop that save the last element of 
+  given array to the temp array 
+but simply we can use reverse(bigan of array, end of array) to reverse and 
+array and vector
 */
