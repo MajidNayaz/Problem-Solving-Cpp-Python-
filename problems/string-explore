@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    
+
+    return 0;
+}
+/*Reverse the sentence such that:
+today is monday --> monday is today
+
+vector r = ['t','o','d', 'a', 'y','', 'i', 's',]
+*/ 
