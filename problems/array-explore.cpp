@@ -3,8 +3,6 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
-// To execute C++, please define "int main()"
 // nums = {4, 0, 7, 4, 0, 9, 2, 9, 1}
 
 // Tasks
@@ -16,13 +14,18 @@ using namespace std;
 // Return the final array.
 
 
+
+
+// The findMax function is for finding the maximum element of an array
+// By just calling the max_element Function
 int FindMax(std::vector<int> nums){
   int maximum; 
   maximum = *max_element(nums.begin(), nums.end());
   return maximum;  
 }
 
-
+//This function finds the second largest by ereasing the first maximum element 
+//and again calling the findMax function
 int findSecondLargest(vector<int> nums){
   int maximum = FindMax(nums);
   nums.erase(remove(nums.begin(),nums.end(),maximum),nums.end());
@@ -30,6 +33,9 @@ int findSecondLargest(vector<int> nums){
   return secondmax;
 }
 
+
+//This function is used to move all zeroes inside the array to the end and 
+//preserves the other elements order 
 vector <int> moveZeroEnd (vector<int> nums){
   vector <int> A, B;
   for(std::size_t i=0; i < nums.size(); i++){
@@ -43,6 +49,8 @@ vector <int> moveZeroEnd (vector<int> nums){
   return A;
 }
 
+
+//This function is for delating duplicated element 
 vector<int> deleteDuplicated(vector<int> nums) {
     vector<int> temp;
 
@@ -57,10 +65,31 @@ vector<int> deleteDuplicated(vector<int> nums) {
     return temp;
 }
 
+//Reversing a vector without uinsg revers() function
 vector<int> reverseVector(vector<int> nums){
-  reverse(nums.begin(),nums.end());
-  return nums;
+  // reverse(nums.begin(),nums.end());   //we are not allow to using this function
+  vector<int> temp;
+  int j = nums.size()-1;
+  for(int i=0; i<nums.size(); i++){
+    temp.push_back(nums[j]);
+    j--;
+  }
+  return temp;
 }
+
+
+//This is second version of reversing and a bit simpller than first version 
+//using just one integer and looping from reverse
+vector<int> reverseVectorV2(vector<int> nums){
+  vector<int> temp;
+  for(int i=nums.size(); i>0; i--){
+    temp.push_back(nums[i-1]);
+  }
+  return temp;
+}
+
+
+
 
 int main(){
    std::vector<int> nums = {4, 0, 7, 4, 0, 9, 2, 9, 3, 1};
@@ -81,7 +110,7 @@ int main(){
   }
   cout<<endl;
 
-  vector<int> reversedV = reverseVector(nums);
+  vector<int> reversedV = reverseVectorV2(nums);
   cout << "The reversed Vector = ";
   for(int i:reversedV){
     cout << i << " ";
