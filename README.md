@@ -1,5 +1,4 @@
-# C++ Interview Preparation Roadmap
-
+# C++ fundamentals
 ## Goal
 
 Build strong problem-solving skills and solid C++ fundamentals. Complete each session in C++ first.
