@@ -12,3 +12,40 @@ today is monday --> monday is today
 
 vector r = ['t','o','d', 'a', 'y','', 'i', 's',]
 */ 
+
+
+/*
+1. Convert all letters to lowercase.
+
+2. Remove non-alphanumeric characters except spaces.
+
+3. Normalize spaces:
+   - remove leading/trailing spaces
+   - replace multiple spaces with one
+
+4. Count the words.
+
+5. Reverse the entire string character-by-character.
+   Example:
+   "hello world" → "dlrow olleh"
+
+6. Check whether the cleaned string is a palindrome,
+   ignoring spaces.
+   Example:
+   "never odd or even" → true
+
+7. Reverse the sentence by WORDS.
+   Example:
+   "today is monday"
+   → "monday is today"
+
+   "I like learning C++"
+   → "c learning like i"
+
+8. Compress consecutive repeated characters inside each word.
+   Example:
+   "coffee" → "cof2e"
+   "bookkeeper" → "bo2ke2per"
+
+9. Return the final sentence.
+*/
