@@ -54,3 +54,42 @@ isalnum()
 isspace()
 
 */
+
+
+// Online C++ Compiler - Build, Compile and Run your C++ programs online in your favorite browser
+
+#include<iostream>
+#include <vector>
+using namespace std;
+
+string LowerCase_Convert(string St){
+    string s_lower;
+    for (char s : St){
+        s_lower.push_back(tolower(s));
+    }
+    return s_lower;
+}
+
+string RemoveNonAlNum(string St){
+    string cleaned;
+    for (char s : St){
+        if (isalnum(s)){
+            cleaned.push_back(s);
+        }
+    }
+    return cleaned;
+}
+
+
+
+
+int main()
+{
+    // string String_lower = LowerCase_Convert("HeLLo!");
+    // cout << String_lower << endl;
+    
+    // string cleaned_st = RemoveNonAlNum("Hello World!");
+    // cout << cleaned_st << endl; 
+
+    return 0;
+}
