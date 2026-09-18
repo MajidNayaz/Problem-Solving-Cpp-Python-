@@ -48,4 +48,9 @@ vector r = ['t','o','d', 'a', 'y','', 'i', 's',]
    "bookkeeper" → "bo2ke2per"
 
 9. Return the final sentence.
+usefull functions: 
+tolower()
+isalnum()
+isspace()
+
 */
